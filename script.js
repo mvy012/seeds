@@ -1,6 +1,3 @@
-<script type="module"></script>
-setup.js, customize.js, task.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const accountForm = document.getElementById("account-form");
     const customizeForm = document.getElementById("customize-form");
@@ -24,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
       localStorage.setItem("userName", userName);
       localStorage.setItem("streamingServices", JSON.stringify(streamingServices));
-      document.body.classList.toggle('dark-theme');
   
       setupScreen.classList.add("hidden");
       customizeScreen.classList.remove("hidden");
