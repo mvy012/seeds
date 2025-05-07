@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seeds</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="setup-screen" class="container">
+    <h1>welcome to seeds 🌱</h1>
+    <form id="account-form">
+      <label for="user-name">your name:</label>
+      <input type="text" id="user-name" required />
+
+      <p>select the streaming services you use:</p>
+      <label><input type="checkbox" id="spotify" /> spotify</label><br />
+      <label><input type="checkbox" id="applemusic" /> apple music</label><br />
+      <label><input type="checkbox" id="netflix" /> netflix</label><br />
+      <label><input type="checkbox" id="youtube" /> youtube</label><br />
+
+
+      <button type="submit">next</button>
+    </form>
+  </div>
+
+  <div id="customize-screen" class="container hidden">
+    <h2>customize your space!</h2>
+    <form id="customize-form">
+      <label for="bg-color">background color:</label>
+      <input type="color" id="bg-color" value="#486A47" /><br />
+
+      <label for="font">font style:</label>
+      <select id="font">
+        <option value="Arial">arial</option>
+        <option value="Georgia">georgia</option>
+        <option value="Courier New">courier new</option>
+        <option value="Verdana">verdana</option>
+      </select><br />
+
+      <label><input type="checkbox" id="animations" /> enable subtle animations</label><br />
+
+      <label for="photo-upload">upload background photo:</label>
+      <input type="file" id="photo-upload" accept="image/*" /><br />
+
+      <button type="submit">save and continue</button>
+    </form>
+    <img id="custom-photo" class="custom-photo hidden" />
+  </div>
+
+  <div id="task-section" class="container hidden">
+    <h1>seeds 🌱</h1>
+    <p>translate your time into something you can feel.</p>
+    <form id="task-form">
+      <input type="text" id="task" placeholder="enter your task..." required />
+      <input type="text" id="time" placeholder="estimated time (e.g. 30 minutes)" required />
+      <button type="submit">translate</button>
+    </form>
+
+    <div id="output"></div>
+    <h2>your garden timeline</h2>
+    <div id="garden-timeline" class="garden"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <div class="animated-elements"></div>
+
+</body>
+</html>
